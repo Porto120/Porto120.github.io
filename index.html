@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P0RT0 · Links</title>
+<meta name="description" content="Lives de jogos com o P0RT0 e o guaxinim. Twitch, YouTube, redes e a lista de jogos pra pedir na live.">
+<meta property="og:title" content="P0RT0 · Links">
+<meta property="og:description" content="Twitch, YouTube, redes e o Arsenal de jogos do canal.">
+<meta property="og:image" content="img/foto.jpg">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700;900&family=Chakra+Petch:wght@500;700&family=Share+Tech+Mono&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   EDITE AQUI: os links ficam na lista LINKS, lá embaixo no <script>
+   ============================================================ */
+:root{
+  --paper:#EEEAE0; --paper2:#E3DED1; --paper3:#D7D1C1;
+  --ink:#111111; --red:#FF3B1F; --gray:#8C8A84;
+  --f-st:"Big Shoulders Stencil Display",Impact,sans-serif;
+  --f-ui:"Chakra Petch",system-ui,sans-serif;
+  --f-mono:"Share Tech Mono",ui-monospace,monospace;
+  --f-serif:"Instrument Serif",Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--ink)}
+body{min-height:100vh;color:var(--ink);font-family:var(--f-ui);
+  background:var(--paper);
+  background-image:
+    radial-gradient(circle at 1px 1px,#1111110f 1px,transparent 0),
+    linear-gradient(transparent 0 0);
+  background-size:18px 18px;
+  display:flex;justify-content:center;padding:28px 16px 40px}
+.pag{width:100%;max-width:460px;position:relative}
+
+/* faixa superior tipo dossiê */
+.faixa{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--gray);text-transform:uppercase;
+  border-bottom:1px dashed #11111140;padding-bottom:8px;margin-bottom:26px}
+.faixa b{color:var(--red);font-weight:400}
+
+/* cabeçalho */
+.topo{text-align:center;position:relative}
+.foto{width:132px;height:132px;margin:0 auto 16px;position:relative}
+.foto img{width:100%;height:100%;border-radius:50%;display:block;border:3px solid var(--ink)}
+.foto::before{content:"";position:absolute;inset:-12px;border:2px solid var(--red);border-radius:50%;
+  -webkit-mask:conic-gradient(#000 0 20%,transparent 20% 25%,#000 25% 45%,transparent 45% 50%,#000 50% 70%,transparent 70% 75%,#000 75% 95%,transparent 95%);
+          mask:conic-gradient(#000 0 20%,transparent 20% 25%,#000 25% 45%,transparent 45% 50%,#000 50% 70%,transparent 70% 75%,#000 75% 95%,transparent 95%)}
+.ao-vivo{position:absolute;left:50%;bottom:-10px;transform:translateX(-50%);display:none;align-items:center;gap:6px;
+  background:var(--red);color:var(--paper);font:700 12px/1 var(--f-ui);letter-spacing:.14em;padding:6px 10px 5px;white-space:nowrap;
+  clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px))}
+.ao-vivo i{width:7px;height:7px;border-radius:50%;background:var(--paper);animation:pisca 1.2s infinite}
+.ao-vivo.on{display:inline-flex}
+@keyframes pisca{50%{opacity:.2}}
+
+.logo{font-family:var(--f-st);font-weight:900;font-size:64px;line-height:.85;letter-spacing:.02em;display:inline-flex;align-items:center;gap:2px}
+.logo svg{width:.62em;height:.62em;margin-left:.04em;transform:translateY(-.02em)}
+.sub{font-family:var(--f-mono);font-size:12px;letter-spacing:.2em;color:var(--gray);margin-top:10px;text-transform:uppercase}
+.bio{font-family:var(--f-serif);font-style:italic;font-size:21px;line-height:1.25;margin:14px auto 0;max-width:340px}
+
+/* botões */
+.secao{margin-top:30px}
+.rot{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--gray);text-transform:uppercase;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.rot::after{content:"";flex:1;border-top:1px dashed #11111140}
+.btn{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);background:var(--paper);
+  border:2px solid var(--ink);padding:13px 16px;margin-bottom:14px;position:relative;
+  box-shadow:5px 5px 0 var(--ink);
+  transition:transform .12s, box-shadow .12s}
+.btn .ic{width:38px;height:38px;flex:none;display:grid;place-items:center;background:var(--ink);color:var(--paper)}
+.btn .ic svg{width:21px;height:21px;fill:currentColor}
+.btn .tx{flex:1;min-width:0}
+.btn .t{font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.07em;display:block}
+.btn .d{font-family:var(--f-mono);font-size:12px;color:var(--gray);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn .seta{font-family:var(--f-mono);font-size:18px;color:var(--red)}
+.btn:hover,.btn:focus-visible{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink);outline:none}
+.btn:hover .ic,.btn:focus-visible .ic{background:var(--red)}
+.btn.destaque{background:var(--ink);color:var(--paper);box-shadow:5px 5px 0 var(--red)}
+.btn.destaque:hover,.btn.destaque:focus-visible{box-shadow:2px 2px 0 var(--red)}
+.btn.destaque .ic{background:var(--red)}
+.btn.destaque .d{color:#bdb8ad}
+.btn.destaque .seta{color:var(--paper)}
+
+/* guaxinim espiando por cima do card do Arsenal */
+.espia{position:relative;margin-top:62px}
+.espia img{position:absolute;right:18px;top:-58px;width:92px;pointer-events:none;
+  animation:espiar 6s ease-in-out infinite}
+@keyframes espiar{0%,70%,100%{transform:translateY(8px)}78%,92%{transform:translateY(0) rotate(-3deg)}}
+
+/* comandos */
+.cmds{border:2px solid var(--ink);background:var(--paper2);padding:6px 14px;box-shadow:5px 5px 0 var(--ink)}
+.cmd{display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed #11111133;font-size:14px;align-items:baseline}
+.cmd:last-child{border-bottom:0}
+.cmd code{font-family:var(--f-mono);font-size:14px;color:var(--red);flex:none;min-width:86px}
+
+.rodape{margin-top:34px;text-align:center;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:var(--gray);text-transform:uppercase}
+.rodape img{width:56px;display:block;margin:0 auto 6px;opacity:.9}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:380px){.logo{font-size:54px}.btn{padding:11px 12px}}
+</style>
+</head>
+<body>
+<main class="pag">
+  <div class="faixa"><span>dossiê · opr 120</span><span id="hora"><b>●</b> canal ativo</span></div>
+
+  <header class="topo">
+    <div class="foto">
+      <img src="img/foto.jpg" alt="Logo do P0RT0: letra P com uma mira vermelha">
+      <a class="ao-vivo" id="aovivo" href="https://www.twitch.tv/port0120"><i></i>AO VIVO AGORA</a>
+    </div>
+    <h1 class="logo" aria-label="P0RT0">P0RT<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="36" fill="none" stroke="#FF3B1F" stroke-width="14"/><path d="M-6 50H24M76 50H106M50 76V106M50 -6V24" stroke="#111" stroke-width="10"/></svg></h1>
+    <p class="sub">operador · port0120 · cam-01</p>
+    <p class="bio">Lives de jogo, papo com o esquadrão e um guaxinim de mascote.</p>
+  </header>
+
+  <section class="secao">
+    <h2 class="rot">Canais</h2>
+    <div id="canais"></div>
+  </section>
+
+  <section class="secao espia">
+    <img src="img/gx_oi.png" alt="">
+    <div id="arsenal"></div>
+  </section>
+
+  <section class="secao">
+    <h2 class="rot">Redes</h2>
+    <div id="redes"></div>
+  </section>
+
+  <section class="secao">
+    <h2 class="rot">Comandos do chat</h2>
+    <div class="cmds">
+      <div class="cmd"><code>!jogos</code><span>mostra a lista de jogos na tela (no Just Chatting)</span></div>
+      <div class="cmd"><code>!sim / !nao</code><span>vota no próximo jogo quando alguém resgata "Escolha o próximo jogo"</span></div>
+      <div class="cmd"><code>!lista</code><span>link do Arsenal no chat</span></div>
+      <div class="cmd"><code>Munição</code><span>pontos do canal: chame o guaxinim, solte flashbang, interferência…</span></div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <img src="img/gx_base.png" alt="">
+    © P0RT0 · guaxinim desenhado à mão
+  </footer>
+</main>
+
+<script>
+/* ============================================================
+   LINKS — pra mudar, edite só aqui.
+   ic: twitch | youtube | instagram | x | spotify | alvo
+   ============================================================ */
+const LINKS = {
+  canais: [
+    { t: "Twitch",  d: "twitch.tv/port0120",      url: "https://www.twitch.tv/port0120",           ic: "twitch",  destaque: true },
+    { t: "YouTube", d: "youtube.com/@P0RT0120",   url: "https://www.youtube.com/@P0RT0120",        ic: "youtube" },
+  ],
+  arsenal: [
+    { t: "Arsenal: jogos pra pedir", d: "a lista completa da Steam", url: "https://claude.ai/artifact/JEAjGWSMQKfzXcKPbtGgcx", ic: "alvo", destaque: true },
+  ],
+  redes: [
+    { t: "Instagram",         d: "@gui__porto",           url: "https://www.instagram.com/gui__porto/",                     ic: "instagram" },
+    { t: "X",                 d: "@P_ortoo",              url: "https://x.com/P_ortoo",                                     ic: "x" },
+    { t: "Playlist da live",  d: "Spotify",               url: "https://open.spotify.com/playlist/243kXSV71CR96hfCpsCrbH", ic: "spotify" },
+  ],
+};
+const TWITCH_CANAL = "port0120";
+
+const ICONES = {
+  twitch:    '<path d="M4 2 2.5 6v14h5v3h3l3-3h4l5-5V2H4Zm16 12-3 3h-5l-3 3v-3H5V4h15v10Zm-3-7h-2v6h2V7Zm-5 0h-2v6h2V7Z"/>',
+  youtube:   '<path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-4.8.5-4.8s0-3.2-.5-4.8ZM9.7 15V9l5.8 3-5.8 3Z"/>',
+  instagram: '<path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 1.5c-2.9 0-3.2 0-4.3.1C3.6 1.8 1.8 3.6 1.6 7.7 1.5 8.8 1.5 9.1 1.5 12s0 3.2.1 4.3c.2 4.1 2 5.9 6.1 6.1 1.1.1 1.4.1 4.3.1s3.2 0 4.3-.1c4.1-.2 5.9-2 6.1-6.1.1-1.1.1-1.4.1-4.3s0-3.2-.1-4.3c-.2-4.1-2-5.9-6.1-6.1-1.1-.1-1.4-.1-4.3-.1Zm0 1.9c2.8 0 3.2 0 4.3.1 2.9.1 4.1 1.5 4.2 4.2.1 1.1.1 1.4.1 4.3s0 3.2-.1 4.3c-.1 2.7-1.3 4.1-4.2 4.2-1.1.1-1.5.1-4.3.1s-3.2 0-4.3-.1c-2.9-.1-4.1-1.5-4.2-4.2-.1-1.1-.1-1.4-.1-4.3s0-3.2.1-4.3c.1-2.7 1.3-4.1 4.2-4.2 1.1-.1 1.5-.1 4.3-.1Z"/>',
+  x:         '<path d="M17.8 2.5h3.3l-7.2 8.2 8.5 11.3h-6.6l-5.2-6.8-6 6.8H1.3l7.7-8.8L.9 2.5h6.8l4.7 6.2 5.4-6.2Zm-1.2 17.5h1.8L6.6 4.4H4.6l12 15.6Z"/>',
+  spotify:   '<path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21Zm4.8 15.2a.7.7 0 0 1-.9.2c-2.5-1.5-5.7-1.9-9.4-1a.7.7 0 1 1-.3-1.3c4.1-.9 7.6-.5 10.4 1.2.3.2.4.6.2.9Zm1.3-2.9a.8.8 0 0 1-1.1.3c-2.9-1.8-7.3-2.3-10.7-1.3a.8.8 0 1 1-.5-1.6c3.9-1.2 8.8-.6 12 1.5.4.2.5.7.3 1.1Zm.1-3c-3.4-2-9.1-2.2-12.4-1.2a1 1 0 1 1-.6-1.9c3.8-1.1 10-.9 14 1.4a1 1 0 0 1-1 1.7Z"/>',
+  alvo:      '<path d="M11 1h2v3.1A8 8 0 0 1 19.9 11H23v2h-3.1A8 8 0 0 1 13 19.9V23h-2v-3.1A8 8 0 0 1 4.1 13H1v-2h3.1A8 8 0 0 1 11 4.1V1Zm1 5a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/>',
+};
+
+function montar(id, lista) {
+  const alvo = document.getElementById(id);
+  for (const l of lista) {
+    const a = document.createElement("a");
+    a.className = "btn" + (l.destaque ? " destaque" : "");
+    a.href = l.url; a.target = "_blank"; a.rel = "noopener";
+    a.innerHTML = `<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONES[l.ic] || ICONES.alvo}</svg></span>
+      <span class="tx"><span class="t"></span><span class="d"></span></span><span class="seta" aria-hidden="true">→</span>`;
+    a.querySelector(".t").textContent = l.t;
+    a.querySelector(".d").textContent = l.d;
+    alvo.appendChild(a);
+  }
+}
+montar("canais", LINKS.canais);
+montar("arsenal", LINKS.arsenal);
+montar("redes", LINKS.redes);
+
+/* selo AO VIVO: pergunta pro decapi.me se a live está no ar (se falhar, só não aparece) */
+fetch("https://decapi.me/twitch/uptime/" + TWITCH_CANAL, { cache: "no-store" })
+  .then((r) => r.ok ? r.text() : "")
+  .then((t) => {
+    if (t && !/offline|error|not found|no user/i.test(t)) {
+      document.getElementById("aovivo").classList.add("on");
+      document.getElementById("hora").innerHTML = "<b>●</b> ao vivo há " + t.replace(/,? \d+ seconds?/, "").trim();
+    }
+  })
+  .catch(() => {});
+</script>
+</body>
+</html>
